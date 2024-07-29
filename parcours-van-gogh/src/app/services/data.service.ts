@@ -6,6 +6,8 @@ export interface Message {
   id: number;
   text: string;
   image: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 @Injectable({
@@ -19,6 +21,8 @@ export class DataService {
       id: 0,
       text: "La Nuit étoilée\" est un tableau de Vincent van Gogh peint en 1888. Il montre un ciel nocturne rempli d'étoiles brillantes au-dessus de la ville d'Arles. Les étoiles scintillent dans le ciel bleu foncé, et le tableau est rempli de mouvement et de lumière. Van Gogh a utilisé des couleurs vibrantes pour rendre le ciel vivant et magique. C'est comme si les étoiles dansaient dans la nuit, créant une scène paisible mais pleine d'énergie.",
       image: 'la_nuit_etoilee_1888.jpg',
+      latitude: 43.663616,
+      longitude: 4.809491,
     },
     {
       title: "L'escalier du pont de trinquetaille",
@@ -74,14 +78,14 @@ export class DataService {
       date: '1888',
       id: 8,
       text: "\"Le Pont de Langlois aux lavandi\u00E8res\" est un tableau de Vincent van Gogh \r\npeint en 1888. Il montre un joli pont en bois pr\u00E8s de la ville d'Arles, en France. \r\nSur ce pont, il y a des femmes qui lavent leurs v\u00EAtements dans la rivi\u00E8re. \r\nVan Gogh a utilis\u00E9 des couleurs vives, comme le bleu du ciel et le jaune des \r\nchamps, pour rendre la sc\u00E8ne joyeuse et lumineuse. Ce tableau montre un \r\nmoment de la vie quotidienne et comment les gens travaillaient \u00E0 cette \r\n\u00E9poque. C'est comme une fen\u00EAtre sur le pass\u00E9, o\u00F9 on peut voir comment les \r\ngens vivaient et travaillaient ensemble pr\u00E8s de la nature.",
-      image: 'le_pont_de_Langlois_aux_Lavandieres.jpeg',
+      image: 'le_pont_de_Langlois_aux_Lavandieres.jpg',
     },
   ];
 
   constructor() { }
 
   public getMessages(): Message[] {
-    return this.messages.sort((a, b) => a.title.localeCompare(b.title));
+    return this.messages;
   }
 
   public getMessageById(id: number): Message {

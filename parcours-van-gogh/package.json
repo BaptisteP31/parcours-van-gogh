@@ -30,8 +30,10 @@
     "@capacitor/keyboard": "latest",
     "@capacitor/status-bar": "latest",
     "@ionic/angular": "^8.0.0",
+    "@types/leaflet": "^1.9.12",
     "angular-new-router": "github:angular/router",
     "ionicons": "^7.2.1",
+    "leaflet": "^1.9.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

@@ -18,6 +18,7 @@ export class ViewMessagePage implements OnInit {
   private data = inject(DataService);
   private activatedRoute = inject(ActivatedRoute);
   private platform = inject(Platform);
+  private leafletMap : any;
 
   constructor() {
     addIcons({ personCircle });
@@ -32,4 +33,5 @@ export class ViewMessagePage implements OnInit {
     const isIos = this.platform.is('ios')
     return isIos ? 'Inbox' : '';
   }
+
 }
