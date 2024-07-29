@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">parcours-van-gogh</string>
+    <string name="title_activity_main">parcours-van-gogh</string>
+    <string name="package_name">parcours.van.gogh</string>
+    <string name="custom_url_scheme">parcours.van.gogh</string>
+</resources>

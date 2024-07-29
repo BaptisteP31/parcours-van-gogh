@@ -14,7 +14,8 @@ import { DataService, Message } from '../services/data.service';
 })
 export class HomePage {
   private data = inject(DataService);
-  constructor() {}
+  public coordonates: any;
+  constructor() { }
 
   refresh(ev: any) {
     setTimeout(() => {
@@ -25,4 +26,5 @@ export class HomePage {
   getMessages(): Message[] {
     return this.data.getMessages();
   }
+
 }
